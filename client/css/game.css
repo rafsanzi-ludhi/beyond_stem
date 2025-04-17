@@ -10,4 +10,5 @@
 body {
   background-color: var(--color-mint);
   color: var(--color-teal-dark);
+  font-family: "Poppins", sans-serif;
 }
