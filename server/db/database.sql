@@ -7,13 +7,13 @@ CREATE TABLE history_item(
     id INT GENERATED ALWAYS AS IDENTITY,
     fact VARCHAR(500) NOT NULL,
     fact_img VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
 );
 
 CREATE TABLE category(
     category_id INT GENERATED ALWAYS AS IDENTITY,
-    card_id INT NOT NULL
-    PRIMARY KEY(category_id)
+    card_id INT NOT NULL,
+    PRIMARY KEY(category_id),
 );
 
 CREATE TABLE user_info (
@@ -23,11 +23,12 @@ CREATE TABLE user_info (
     school VARCHAR(50),
     email VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
 );
 
 CREATE TABLE user_progress(
     card_id INT GENERATED ALWAYS AS IDENTITY,
     user_id INT NOT NULL,
-    PRIMARY KEY(card_id)
+    PRIMARY KEY(card_id),
 );
+
