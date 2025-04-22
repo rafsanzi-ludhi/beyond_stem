@@ -18,99 +18,122 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+
+    <!-- bootstrap icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
     <!-- Our custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/loginPage.css" />
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+          }
+        
+          /* borders for debugging and visualising layout */
+          .container {
+            border: 2px solid black;
+          }
+        
+          .row {
+            border: 2px dashed grey;
+          }
+        
+          .col-md-6 {
+            border: 2px dotted blue;
+          }
+        
+          form {
+            border: 2px solid red;
+            padding: 10px;
+          }
+        
+          .d-flex.justify-content-end {
+            border: 2px dashed green;
+            padding: 5px;
+          }
+        
+          h1 {
+            border: 1px solid purple;
+            padding: 10px;
+          }
+        
+          h4 {
+            border: 1px dashed orange;
+            padding: 5px;
+          }
+        </style>
   </head>
   <body>
-    <h1>Login Page</h1>
-    <p>Welcome to the best game in the world</p>
     <div class="container py-4">
+    
       <!-- top right socials -->
-      <div class="d-flex justify-content-end">
-        <button class="btn btn-outline-secondary btn-sm me-2">socials</button>
-        <button class="btn btn-outline-secondary btn-sm me-2">socials</button>
-        <button class="btn btn-outline-secondary btn-sm">socials</button>
+      <div class="d-flex justify-content-end gap-2">
+        <a href="#" class="btn btn-outline-secondary btn-sm" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-sm" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-sm" aria-label="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
       </div>
-
+    
+    
       <!-- page Heading -->
-      <h1
-        class="text-center fw-bold mt-3 mb-4"
-        style="text-shadow: 2px 2px #00000020"
-      >
-        Beyond STEM
-      </h1>
-
+      <h1 class="text-center fw-bold mt-3 mb-4" style="text-shadow: 2px 2px #00000020;">Beyond STEM</h1>
+    
       <!-- sign In / Register Row -->
-      <div class="row border-top pt-4 gy-5">
+      <div class="row border-top pt-4 gy-5 align-items-stretch">
+    
         <!-- sign In Column -->
-        <div class="col-md-6 border-end">
+        <div class="col-md-6 border-end d-flex flex-column">
           <h4 class="text-center mb-3 fw-semibold">Sign In</h4>
-          <form class="px-4">
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="email address*"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="password*"
-              />
+          <form class="px-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="email address*" />
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="password*" />
+              </div>
             </div>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-dark">
-                Continue :P
-              </button>
+              <button type="button" class="btn btn-outline-dark">Continue</button>
             </div>
           </form>
         </div>
-
+    
         <!-- register Column -->
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex flex-column">
           <h4 class="text-center mb-3 fw-semibold">Register</h4>
-          <form class="px-4">
-            <div class="mb-2">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="First Name*"
-              />
-            </div>
-            <div class="mb-2">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Last Name*"
-              />
-            </div>
-            <div class="mb-2">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="email address*"
-              />
-            </div>
-            <div class="mb-2">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="password*"
-              />
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="school" />
+          <form class="px-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="mb-2">
+                <input type="text" class="form-control" placeholder="First Name*" />
+              </div>
+              <div class="mb-2">
+                <input type="text" class="form-control" placeholder="Last Name*" />
+              </div>
+              <div class="mb-2">
+                <input type="email" class="form-control" placeholder="email address*" />
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control" placeholder="password*" />
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="school" />
+              </div>
             </div>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-dark">
-                Submit :P
-              </button>
+              <button type="button" class="btn btn-outline-dark">Submit</button>
             </div>
           </form>
         </div>
+    
       </div>
+    
     </div>
 
     <!-- ---------------------------Write HTML above this line----------------------------------------- -->
