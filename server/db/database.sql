@@ -12,7 +12,7 @@ CREATE TABLE history_item(
 
 CREATE TABLE category(
     category_id INT GENERATED ALWAYS AS IDENTITY,
-    card_id INT NOT NULL
+    card_id INT NOT NULL,
     PRIMARY KEY(category_id)
 );
 
