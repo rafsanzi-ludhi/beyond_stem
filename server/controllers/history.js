@@ -12,7 +12,7 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const id = req.params.id; // Use id parameter instead of name
-    const historyItem = await History.getOneById(id); // Use the renamed method
+    const historyItem = await History.getOneById(id);
     res.status(200).json(historyItem);
   } catch (err) {
     res.status(404).json({ error: err.message });
@@ -33,7 +33,7 @@ async function update(req, res) {
   try {
     const id = req.params.id; // Use id parameter instead of name
     const data = req.body;
-    const historyItem = await History.getOneById(id); // Use the renamed method
+    const historyItem = await History.getOneById(id);
     const result = await historyItem.update(data);
     res.status(200).json(result);
   } catch (err) {
@@ -44,7 +44,7 @@ async function update(req, res) {
 async function destroy(req, res) {
   try {
     const id = req.params.id; // Use id parameter instead of name
-    const historyItem = await History.getOneById(id); // Use the renamed method
+    const historyItem = await History.getOneById(id);
     await historyItem.destroy();
     res.status(204).end();
   } catch (err) {
