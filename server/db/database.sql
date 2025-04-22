@@ -13,7 +13,7 @@ CREATE TABLE history_item(
 CREATE TABLE category(
     category_id INT GENERATED ALWAYS AS IDENTITY,
     card_id INT NOT NULL,
-    PRIMARY KEY(category_id),
+    PRIMARY KEY(category_id)
 );
 
 CREATE TABLE user_info (
