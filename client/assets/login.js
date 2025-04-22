@@ -1,5 +1,4 @@
 document.getElementById("login-form").addEventListener("submit", async (e) => {
-  console.log(123);
 
   e.preventDefault();
 
@@ -18,6 +17,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   };
 
   const response = await fetch("http://localhost:3000/users/login", options);
+  
   const data = await response.json();
 
   if (response.status == 200) {
