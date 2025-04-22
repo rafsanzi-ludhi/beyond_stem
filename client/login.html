@@ -31,10 +31,18 @@
 
   <body>
     <main>
-      <ul>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Sign up</a></li>
-      </ul>
+      <form id="login-form">
+        <fieldset>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </fieldset>
+        <fieldset>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+        </fieldset>
+        <input type="submit" value="Log in" />
+      </form>
+      <p>No account? <a href="./register.html">Sign up here</a>.</p>
     </main>
     <!-- ---------------------------Write HTML above this line----------------------------------------- -->
     <!-- Bootstrap JS -->

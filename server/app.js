@@ -9,6 +9,9 @@
 const express = require("express");
 const cors = require("cors");
 const historyRouter = require("./routers/history");
+const userRouter = require("./routers/user");
+
+const logRoutes = require("./middleware/logger");
 
 const logger = require("./logger");
 
@@ -16,11 +19,18 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(logRoutes);
 app.use(logger);
 
-// app.get("/history", (req, res) => {
-//   res.send("Server is running ✅");
-// });
+app.get("/", (req, res) => {
+  res.json({
+    name: "Discretion",
+    description: "Send and receive private messages.",
+  });
+});
 
 app.use("/history", historyRouter);
+
+app.use("/users", userRouter);
+
 module.exports = app;
