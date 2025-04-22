@@ -1,0 +1,14 @@
+:root {
+  --color-mint: #e4f9f5;
+  --color-teal: #11999e;
+  --color-teal-light: #30e3ca;
+  --color-teal-dark: #40514e;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+body {
+  background-color: var(--color-mint);
+  color: var(--color-teal-dark);
+  font-family: "Poppins", sans-serif;
+}
