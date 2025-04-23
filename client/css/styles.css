@@ -90,3 +90,39 @@ main p {
   color: var(--color-teal-dark);
   letter-spacing: 2px;
 }
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  max-width: 350px;
+  border-radius: 12px;
+  border: 1px solid var(--color-teal-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--color-mint);
+}
+
+.card-img-top {
+  width: 100%;
+  padding-top: 1rem;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: var(--color-mint);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  min-height: 150px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}

@@ -9,13 +9,13 @@ function displayFact(index) {
 
   const card = document.createElement("div");
   card.className = "card mx-auto mb-4";
-  card.style.maxWidth = "600px";
+  card.style.maxWidth = "350px";
 
   const img = document.createElement("img");
   img.src = `${data.fact_img}`;
 
   img.alt = "Fact image";
-  img.className = "card-img-top";
+  img.className = "card-img-top img-fluid";
   card.appendChild(img);
 
   const body = document.createElement("div");
