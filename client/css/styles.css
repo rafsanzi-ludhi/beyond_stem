@@ -16,6 +16,9 @@ body {
 .bg-body-tertiary {
   background-color: var(--color-mint) !important;
 }
+.nav-item {
+  list-style: none;
+}
 .github-link {
   text-decoration: underline;
   color: var(--color-teal-dark);
@@ -125,4 +128,7 @@ main p {
 
 .mb-4 {
   margin-bottom: 1rem !important;
+}
+.children {
+  width: 20%;
 }
