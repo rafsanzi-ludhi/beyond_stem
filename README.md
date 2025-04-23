@@ -75,6 +75,10 @@ This project's aim was to integrate all core Lafosse course topics:
 
     •   Naming: camelCase for JavaScript, snake_case for SQL
     •   Design: Accessible colour palette, readable fonts, intuitive navigation
+
+**Sorces**
+ - img (/beyond_stem/client/homePage.html) https://storyset.com/
+
  
 ⸻
  
