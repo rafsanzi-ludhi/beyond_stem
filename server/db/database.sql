@@ -30,7 +30,7 @@ CREATE TABLE user_progress(
 );
 
 INSERT INTO history_item VALUES 
-    (1, 'The Leaning Tower of Pisa was never straight. Known for its four-degree lean, this Italian tower was constructed in the 12th century. When construction on the second story started, the tower started to lean due to the unstable ground it was built on.','beyond_stem/client/images/001.png'),
+    (1, 'The Leaning Tower of Pisa was never straight. Known for its four-degree lean, this Italian tower was constructed in the 12th century. When construction on the second story started, the tower started to lean due to the unstable ground it was built on.','images/001.png'),
     (2, 'The University of Oxford is older than the Aztec Empire. First opened its doors to students all the way back in 1096. By comparison, the Aztec Empire is said to have originated with the founding of the city Texcoco, which occurred in the year 1325.','beyond_stem/client/images/002.png'),
     (3, 'The most famous female serial killer was a Hungarian Countess, Elizabeth Báthory de Ecsed. She was accused of torturing and killing over 650 young women. Most of them were between the ages of 10 and 14.', 'beyond_stem/client/images/003.png'),
     (4, 'Rum was first introduced to Jamaica by Christopher Columbus in 1494. 1665 when Jamaica became a British colony after Spanish rule, it bacame a hub for rum prodiuction. 1665 when Jamaica became a British colony after Spanish rule','beyond_stem/client/images/004.png'),

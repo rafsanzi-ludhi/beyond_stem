@@ -33,37 +33,26 @@
             height="65"
           />
         </a>
-        <button class="btn btn-danger">Logout</button>
+        <button class="btn btn-danger logout-btn">Logout</button>
       </div>
     </nav>
     <main>
-      <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
+      <div id="fact-display"></div>
+
       <div class="container text-center">
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-outline-primary">
+            <button id="prev-btn" class="btn btn-outline-primary">
               Previous
             </button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-outline-success" disabled>
-              Add to Favourite
+            <button id="prev-btn" class="btn btn-outline-success" disabled>
+              Add to Favourites
             </button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-outline-primary">Next</button>
+            <button id="next-btn" class="btn btn-outline-primary">Next</button>
           </div>
         </div>
       </div>
@@ -96,7 +85,7 @@
     ></script>
 
     <!-- Our custom JS -->
-    <script src="js/common.js" defer></script>
+    <script src="./js/game.js" defer></script>
     <script src="./assets/logout.js" defer></script>
   </body>
 </html>
