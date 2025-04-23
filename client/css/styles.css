@@ -51,13 +51,12 @@ body {
 }
 
 main {
-  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 main p {
@@ -129,6 +128,9 @@ main p {
 .mb-4 {
   margin-bottom: 1rem !important;
 }
-.children {
+.illustration {
   width: 20%;
+}
+#fact-display {
+  margin-bottom: 3%;
 }
