@@ -13,3 +13,122 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.bg-body-tertiary {
+  background-color: var(--color-mint) !important;
+}
+.nav-item {
+  list-style: none;
+}
+.github-link {
+  text-decoration: underline;
+  color: var(--color-teal-dark);
+  font-weight: 300;
+}
+.github-link:hover {
+  text-decoration: none;
+}
+.custom-footer {
+  background-color: var(--color-teal-dark);
+  padding: 10px 0;
+}
+
+.custom-footer .social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.custom-footer .social-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  color: var(--color-mint);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+main p {
+  max-width: 600px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-teal-dark);
+}
+.login-links {
+  margin-top: 3%;
+}
+.login-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.login-links a {
+  background-color: var(--color-teal-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-mint);
+  padding: 3px 20px;
+  border-radius: 3px;
+  display: inline-block;
+  transition-duration: 0.2s;
+  margin: 5px;
+}
+
+.login-links a:hover {
+  background-color: var(--color-teal-light);
+  color: var(--color-teal-dark);
+  letter-spacing: 2px;
+}
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  max-width: 350px;
+  border-radius: 12px;
+  border: 1px solid var(--color-teal-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--color-mint);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+  background-color: var(--color-mint);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  min-height: 150px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+.illustration {
+  width: 20%;
+}
+#fact-display {
+  margin-bottom: 3%;
+}

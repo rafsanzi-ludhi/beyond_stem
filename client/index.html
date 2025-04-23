@@ -7,7 +7,6 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <a href="game.html" class="btn btn-primary">Start Game</a>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -31,12 +30,75 @@
   </head>
 
   <body>
+    <nav class="navbar custom-nav bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/logo.jpeg"
+            alt="Bootstrap"
+            width="180"
+            height="65"
+          />
+        </a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            MENU
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./login.html">Login</a></li>
+            <li><a class="dropdown-item" href="./register.html">SignUp</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://github.com/rafsanzi-ludhi/beyond_stem"
+                target="_blank"
+                >Project on Github</a
+              >
+            </li>
+          </ul>
+        </li>
+      </div>
+    </nav>
     <main>
-      <ul>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Sign up</a></li>
-      </ul>
+      <img
+        src="images/Children.png"
+        class="illustration"
+        alt="image of children"
+      />
+      <p>
+        This project is a team-built educational game designed to re-engage
+        students in non-STEM subjects across a network of secondary schools. It
+        represents a culmination of the skills and tools we’ve learned on the
+        course, including full-stack development, user experience design, Agile
+        collaboration, and technical documentation.
+      </p>
+      <p>Click the MENU to start</p>
+      <!-- <div class="login-links">
+        <ul>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./register.html">Sign up</a></li>
+        </ul>
+      </div> -->
     </main>
+    <footer class="footer fixed-bottom custom-footer">
+      <p>Follow us</p>
+      <div class="container-fluid justify-content-center d-flex">
+        <img
+          src="images/instagram.png"
+          alt="instagram logo"
+          class="social-icon"
+        />
+        <img src="images/reddit.png" alt="reddit logo" class="social-icon" />
+        <img src="images/tik-tok.png" alt="tik-tok logo" class="social-icon" />
+      </div>
+    </footer>
+
     <!-- ---------------------------Write HTML above this line----------------------------------------- -->
     <!-- Bootstrap JS -->
     <script

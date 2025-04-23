@@ -1,11 +1,8 @@
-// <<<<<<< HEAD
-// =======
-const History = require("../models/History"); // Import the History model, not Country
-
+const History = require("../models/History");
 async function index(req, res) {
   try {
     const historyItems = await History.getAll();
-    res.status(200).json(historyItems);
+    res.status(200).json(historyItems)
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -13,7 +10,7 @@ async function index(req, res) {
 
 async function show(req, res) {
   try {
-    const id = req.params.id; // Use id parameter instead of name
+    const id = req.params.id;
     const historyItem = await History.getOneById(id);
     res.status(200).json(historyItem);
   } catch (err) {
@@ -33,7 +30,7 @@ async function create(req, res) {
 
 async function update(req, res) {
   try {
-    const id = req.params.id; // Use id parameter instead of name
+    const id = req.params.id;
     const data = req.body;
     const historyItem = await History.getOneById(id);
     const result = await historyItem.update(data);
@@ -45,7 +42,7 @@ async function update(req, res) {
 
 async function destroy(req, res) {
   try {
-    const id = req.params.id; // Use id parameter instead of name
+    const id = req.params.id;
     const historyItem = await History.getOneById(id);
     await historyItem.destroy();
     res.status(204).end();
@@ -55,4 +52,3 @@ async function destroy(req, res) {
 }
 
 module.exports = { index, show, create, update, destroy };
-// >>>>>>> d5c6182b7a7fa1423a7e60fc1efd72ea0739cb2e
