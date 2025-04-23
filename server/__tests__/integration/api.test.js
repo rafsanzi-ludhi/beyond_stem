@@ -14,10 +14,10 @@ describe('History API endpoints', () =>{
         })
       })
     
-    //   afterAll((done) => {
-    //     console.log('Closing test server')
-    //     api.close(done)
-    //   })
+      afterAll((done) => {
+        console.log('Closing test server')
+        api.close(done)
+      })
 
       xdescribe('GET /', () => {
         it('responds to GET / with a message and a description', async () => {
