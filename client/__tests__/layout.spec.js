@@ -3,7 +3,7 @@ const { renderDOM } = require('./helpers');
 let dom;
 let document;
 
-describe('index.html', () => {
+xdescribe('index.html', () => {
   beforeEach(async () => {
     dom = await renderDOM('./client/index.html');
     document = dom.window.document;

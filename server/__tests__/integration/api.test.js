@@ -9,8 +9,8 @@ describe('History API endpoints', () =>{
       })
     
       beforeAll(() => {
-        api = app.listen(4000, () => {
-          console.log('Test server running on port 4000')
+        api = app.listen(3100, () => {
+          console.log('Test server running on port 3100')
         })
       })
     
