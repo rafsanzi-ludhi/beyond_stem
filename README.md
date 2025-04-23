@@ -1,4 +1,4 @@
-<h1><i>beyond</i> STEM - Learning ToolTool📚 - Full stack MVP </h1>
+<h1><i>beyond</i> STEM - Learning Tool📚 - Full stack MVP </h1>
 Week 5 Project Alpha at La Fosse
  
 ## Engaging Minds: Educational Cards for History.
@@ -9,13 +9,13 @@ This project is a team-built educational tool designed to re-engage students in 
  
 ⸻
  
-**Challange**
+**Challenge**
  
-The Hive group of schools is seeing decreased student interest and retention in non-STEM subjects. Our mission is to create a fun, educational digital solution that puts student enjoyment at the center of the learning experience.
+The Hive group of schools is seeing decreased student interest and retention in non-STEM subjects. Our mission is to create a fun, educational digital solution that puts student enjoyment at the centre of the learning experience.
 
 **Stakeholder Insights**
 
-The planning and design of the application was underpinned by the summary of a wide variaty of stakeholder statements from students, teachers, to parents, and leadership. 
+The planning and design of the application was underpinned by the summary of a wide variety of stakeholder statements from students, teachers, to parents, and leadership. 
 -  <em>Students</em> feel overwhelmed by repetitive lessons and struggle to retain information.
 -  <em>Teachers</em> report reduced lesson frequency and superficial subject coverage.
 -  <em>Parents</em> see a drop in engagement and enjoyment.
@@ -24,7 +24,7 @@ The planning and design of the application was underpinned by the summary of a w
 
 **Our Solution**
  
-An interactive, game-based web app focused on delivering non-STEM knowledge in fun, bite-sized formats. Students progress through historical fact cards with a short description and image.Some of these facts are from the realm of the weird and wonderful because we think the teenage engagement with media is driven by curiosity, creativity, and the thrill of discovering something unexpected. Whether it’s a bizarre historical fact, an unexplained mystery, or an oddly satisfying video, young people are naturally drawn to the "strage" because it breaks the routine and sparks imagination and conversation.
+An interactive, game-based web app focused on delivering non-STEM knowledge in fun, bite-sized formats. Students progress through historical fact cards with a short description and image. Some of these facts are from the realm of the weird and wonderful because we think the teenage engagement with media is driven by curiosity, creativity, and the thrill of discovering something unexpected. Whether it’s a bizarre historical fact, an unexplained mystery, or an oddly satisfying video, young people are naturally drawn to the "strange" because it breaks the routine and sparks imagination and conversation.
 
  
 **Key Features**
@@ -74,7 +74,7 @@ This project's aim was to integrate all core Lafosse course topics:
 **Style Guide**
 
     •   Naming: camelCase for JavaScript, snake_case for SQL
-    •   Design: Accessible color palette, readable fonts, intuitive navigation
+    •   Design: Accessible colour palette, readable fonts, intuitive navigation
  
 ⸻
  
@@ -82,7 +82,7 @@ This project's aim was to integrate all core Lafosse course topics:
 
     •   ✅ Stakeholder & solution analysis
     •   ✅ Database schema (ERD)
-    •   ✅ Wireframes & UI mockups
+    •   ✅ Wireframes & UI mock-ups
     •   ✅ Deployed MVP of the educational tool
     •   ✅ End-of-project team presentation
  
@@ -114,9 +114,9 @@ This project's aim was to integrate all core Lafosse course topics:
 ⸻
  
 **What We’ve Learned**
-The <i>Beyond</i>STEM team initially struggeled with version control. Code conflicts, overwritten files, and unclear Git workflows were at times slowing the progress and created confusion. We have deffinitely learned the imporatnce of maintaining clear commit habits, consistent branching, and regular updates. 
+The <i>Beyond</i>STEM team initially struggled with version control. Code conflicts, overwritten files, and unclear Git workflows were at times slowing the progress and created confusion. We have learned the importance of maintaining clear commit habits, consistent branching, and regular updates. 
 
-From user-centered design to full-stack development and project delivery, this project reflects our growth in:
+From user-centred design to full-stack development and project delivery, this project reflects our growth in:
 
     •   Communication and collaboration
     •   Agile project planning
