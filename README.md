@@ -125,7 +125,13 @@ From user-centered design to full-stack development and project delivery, this p
     •   Making something fun that really works!
 
 
-The <i>Beyond</i>STEM team
+The <i>Beyond</i>STEM team 👏
 
-list of github accounts...
+- [Ubong](https://github.com/sfxmaudu)
+- [Booby](https://github.com/bbm2910)
+- [Khavan](https://github.com/gitKhavan)
+- [Raf](https://github.com/rafsanzi-ludhi)
+- [Alex](https://github.com/abittmann)
+
+
 
