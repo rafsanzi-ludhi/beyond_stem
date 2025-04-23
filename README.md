@@ -121,7 +121,7 @@ From user-centred design to full-stack development and project delivery, this pr
     •   Communication and collaboration
     •   Agile project planning
     •   Writing maintainable, testable and scalable code
-    •   Connecting frontend to backend with real data
+    •   Connecting frontend to backend with real dataerrors
     •   Making something fun that really works!
 
 
