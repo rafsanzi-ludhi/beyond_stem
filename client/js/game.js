@@ -13,7 +13,7 @@ function displayFact(index) {
 
   const img = document.createElement("img");
   img.src = `${data.fact_img}`; // What is the image path???!! :(((((
-  console.log(data.fact_img);
+
   img.alt = "Fact image";
   img.className = "card-img-top";
   card.appendChild(img);
