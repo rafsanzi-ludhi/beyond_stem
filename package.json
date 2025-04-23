@@ -36,5 +36,10 @@
     "pg": "^8.14.1",
     "supertest": "^7.1.0",
     "uuid": "^9.0.0"
+  },
+  "jest":{
+    "testPathIgnorePatterns":[
+      "./__tests__/integration/config.js"
+    ]
   }
 }

@@ -2,7 +2,7 @@ const History = require("../models/History");
 async function index(req, res) {
   try {
     const historyItems = await History.getAll();
-    res.status(200).json(historyItems);
+    res.status(200).json(historyItems)
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
