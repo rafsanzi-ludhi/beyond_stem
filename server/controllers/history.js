@@ -1,3 +1,5 @@
+// <<<<<<< HEAD
+// =======
 const History = require("../models/History"); // Import the History model, not Country
 
 async function index(req, res) {
@@ -53,3 +55,4 @@ async function destroy(req, res) {
 }
 
 module.exports = { index, show, create, update, destroy };
+// >>>>>>> d5c6182b7a7fa1423a7e60fc1efd72ea0739cb2e
