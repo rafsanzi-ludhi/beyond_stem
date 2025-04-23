@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/rafsanzi-ludhi/beyond_stem#readme",
   "devDependencies": {
+    "jsdom": "^26.1.0",
     "nodemon": "^2.0.22"
   },
   "dependencies": {
