@@ -24,8 +24,8 @@ app.use(logger);
 
 app.get("/", (req, res) => {
   res.json({
-    name: "Discretion",
-    description: "Send and receive private messages.",
+    name: "Beyond Stem",
+    description: "team-built educational game",
   });
 });
 
