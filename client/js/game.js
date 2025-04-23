@@ -12,7 +12,8 @@ function displayFact(index) {
   card.style.maxWidth = "600px";
 
   const img = document.createElement("img");
-  img.src = `http://localhost:3000/${data.fact_img}`; // What is the image path???!! :(((((
+  img.src = `${data.fact_img}`; // What is the image path???!! :(((((
+  console.log(data.fact_img);
   img.alt = "Fact image";
   img.className = "card-img-top";
   card.appendChild(img);
