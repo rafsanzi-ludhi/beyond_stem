@@ -106,7 +106,7 @@ This project's aim was to integrate all core Lafosse course topics:
 
     •   Automated test coverage target: 60%+
     •   Automated test coverage actual: ? 
-    •   Tests written with Jest and Supertest
+    •   Tests written with Jest and JSDOM
  
  
 **Resources**
