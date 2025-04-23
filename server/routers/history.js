@@ -1,10 +1,10 @@
 const { Router } = require("express");
 const historyController = require("../controllers/history");
-const authenticator = require("../middleware/authenticator");
+// const authenticator = require("../middleware/authenticator");
 
 const historyRouter = Router();
 
-historyRouter.get("/", authenticator, historyController.index);
+historyRouter.get("/", historyController.index);
 historyRouter.get("/:id", historyController.show);
 historyRouter.post("/", historyController.create);
 historyRouter.patch("/:id", historyController.update);
