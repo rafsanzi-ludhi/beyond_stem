@@ -2,7 +2,7 @@ const History = require("../../../models/History")
 const db = require("../../../db/connect")
 
 
-xdescribe('History', () => {
+describe('History', () => {
     beforeEach(() => jest.clearAllMocks())
   
     afterAll(() => jest.resetAllMocks())

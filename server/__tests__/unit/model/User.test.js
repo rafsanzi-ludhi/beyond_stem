@@ -1,7 +1,7 @@
 const User = require("../../../models/User")
 const db = require("../../../db/connect")
 
-xdescribe('User', () => {
+describe('User', () => {
     beforeEach(() => jest.clearAllMocks())
     afterAll(() => jest.resetAllMocks())
 

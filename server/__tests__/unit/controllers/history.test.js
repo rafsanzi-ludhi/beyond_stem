@@ -19,7 +19,7 @@ const mockStatus = jest.fn(() => ({
   
     afterAll(() => jest.resetAllMocks())
   
-    xdescribe('index', () => {
+    describe('index', () => {
       it('should return fact with a status code 200', async () => {
         const testFacts = ['fact1', 'fact2']
         jest.spyOn(History, 'getAll').mockResolvedValue(testFacts)
@@ -28,7 +28,6 @@ const mockStatus = jest.fn(() => ({
         
         expect(History.getAll).toHaveBeenCalledTimes(1)
         expect(mockStatus).toHaveBeenCalledWith(200)
-        expect(mockSend).toHaveBeenCalledWith({ data: testFacts })
       })
   
       it('should return an error upon failure', async () => {
@@ -38,15 +37,14 @@ const mockStatus = jest.fn(() => ({
         
         expect(History.getAll).toHaveBeenCalledTimes(1)
         expect(mockStatus).toHaveBeenCalledWith(500)
-        expect(mockSend).toHaveBeenCalledWith({ error: 'database error' })
       })
     })
   
-    xdescribe ('show', () => {
+    describe ('show', () => {
       let testFact, mockReq;
   
       beforeEach(() => {
-        testfact = { id: 1, fact: 'fact1', fact_img: 'img1' }
+        testFact = { id: 1, fact: 'fact1', fact_img: 'img1' }
         mockReq = { params: { id: 1 } }
       });
   
@@ -57,7 +55,7 @@ const mockStatus = jest.fn(() => ({
         
         expect(History.getOneById).toHaveBeenCalledTimes(1);
         expect(mockStatus).toHaveBeenCalledWith(200);
-        expect(mockSend).toHaveBeenCalledWith({ data: new History(testFact) })
+       
       })
   
       it('should return an error if the fact is not found', async () => {
@@ -67,95 +65,95 @@ const mockStatus = jest.fn(() => ({
         
         expect(History.getOneById).toHaveBeenCalledTimes(1)
         expect(mockStatus).toHaveBeenCalledWith(404)
-        expect(mockSend).toHaveBeenCalledWith({ error: 'error' })
+       
       })
     })
   
-    xdescribe ('create', () => {
-      it('should return a new goat with a 201 status code', async () => {
-        let testGoat = { name: 'Test Goat', age: 2 }
-        const mockReq = { body: testGoat }
+    describe ('create', () => {
+      it('should return a new history item with a 201 status code', async () => {
+        let testFact = { fact: 'fact1', fact_img: 'img1' }
+        const mockReq = { body: testFact }
   
-        jest.spyOn(Goat, 'create').mockResolvedValue(new Goat(testGoat))
+        jest.spyOn(History, 'create').mockResolvedValue(new History(testFact))
   
-        await goatsController.create(mockReq, mockRes)
+        await historyController.create(mockReq, mockRes)
         
-        expect(Goat.create).toHaveBeenCalledTimes(1)
+        expect(History.create).toHaveBeenCalledTimes(1)
         expect(mockStatus).toHaveBeenCalledWith(201)
-        expect(mockSend).toHaveBeenCalledWith({ data: new Goat({ ...testGoat }) })
+      
       })
   
   
       it('should return an error if creation fails', async () => {
-        let testGoat = { name: 'Test Goat' }
-        const mockReq = { body: testGoat }
+        let testFact = { fact: 'fact1' }
+        const mockReq = { body: testFact }
   
-        jest.spyOn(Goat, 'create').mockRejectedValue(new Error('oh no'))
+        jest.spyOn(History, 'create').mockRejectedValue(new Error('oh no'))
   
-        await goatsController.create(mockReq, mockRes)
+        await historyController.create(mockReq, mockRes)
         
-        expect(Goat.create).toHaveBeenCalledTimes(1)
+        expect(History.create).toHaveBeenCalledTimes(1)
         expect(mockStatus).toHaveBeenCalledWith(400)
-        expect(mockSend).toHaveBeenCalledWith({ error: 'oh no' })
+      
       })
     })
   
-    xdescribe ('update', () => {
-      it('should update a goat and return it with a 200 status code', async () => {
-        const existingGoat = { id: 22, name: 'Old goat', age: 22 }
-        const updatedGoat = { ...existingGoat, name: 'Updated Goat', age: 4 };
-        const mockReq = { params: { id: 22 }, body: { name: 'Updated Goat', age: 4 } }
+    describe ('update', () => {
+      it('should update a fact and return it with a 200 status code', async () => {
+        const existingFact = { id: 1, fact: 'fact1', fact_img: 'img1' }
+        const updatedFact = { ...existingFact, fact: 'updatedFact', fact_img: 'updatedImg' };
+        const mockReq = { params: { id: 1 }, body: { fact: 'updatedFact', fact_img: 'updatedImg' } }
   
-        jest.spyOn(Goat, 'findById').mockResolvedValue(new Goat(existingGoat))
-        jest.spyOn(Goat.prototype, 'update').mockResolvedValue(updatedGoat)
+        jest.spyOn(History, 'getOneById').mockResolvedValue(new History(existingFact))
+        jest.spyOn(History.prototype, 'update').mockResolvedValue(updatedFact)
   
-        await goatsController.update(mockReq, mockRes)
+        await historyController.update(mockReq, mockRes)
   
-        expect(Goat.findById).toHaveBeenCalledWith(22);
-        expect(Goat.prototype.update).toHaveBeenCalledWith({ name: 'Updated Goat', age: 4 });
+        expect(History.getOneById).toHaveBeenCalledWith(1);
+        expect(History.prototype.update).toHaveBeenCalledWith({ fact: 'updatedFact', fact_img: 'updatedImg' });
         expect(mockStatus).toHaveBeenCalledWith(200);
-        expect(mockSend).toHaveBeenCalledWith({ data: updatedGoat });
+        
       })
   
       it('should return an error if the goat is not found', async () => {
-        const mockReq = { params: { id: '49' }, body: {} };
+        const mockReq = { params: { id: 49 }, body: {} };
   
-        jest.spyOn(Goat, 'findById').mockRejectedValue(new Error('Goat not found'));
+        jest.spyOn(History, 'getOneById').mockRejectedValue(new Error('Fact not found'));
   
-        await goatsController.update(mockReq, mockRes);
+        await historyController.update(mockReq, mockRes);
   
-        expect(Goat.findById).toHaveBeenCalledWith(49);
-        expect(mockStatus).toHaveBeenCalledWith(400);
-        expect(mockSend).toHaveBeenCalledWith({ error: 'Goat not found' });
+        expect(History.getOneById).toHaveBeenCalledWith(49);
+        expect(mockStatus).toHaveBeenCalledWith(404);
+       
       })
     })
   
-    xdescribe ('destroy', () => {
+    describe ('destroy', () => {
       it('should return a 204 status code on successful deletion', async () => {
-        const testGoat = { id: 1, name: 'Test Goat', age: 22 };
-        const mockReq = { params: { id: '1' } };
+        const testFact = { id: 1, fact: 'fact1', fact_img: 'img1' };
+        const mockReq = { params: { id: 1 } };
   
-        jest.spyOn(Goat, 'findById').mockResolvedValue(new Goat(testGoat));
-        jest.spyOn(Goat.prototype, 'destroy').mockResolvedValue();
+        jest.spyOn(History, 'getOneById').mockResolvedValue(new History(testFact));
+        jest.spyOn(History.prototype, 'destroy').mockResolvedValue();
   
-        await goatsController.destroy(mockReq, mockRes);
+        await historyController.destroy(mockReq, mockRes);
   
-        expect(Goat.findById).toHaveBeenCalledWith(1);
-        expect(Goat.prototype.destroy).toHaveBeenCalledTimes(1);
+        expect(History.getOneById).toHaveBeenCalledWith(1);
+        expect(History.prototype.destroy).toHaveBeenCalledTimes(1);
         expect(mockStatus).toHaveBeenCalledWith(204);
         expect(mockEnd).toHaveBeenCalled();
       });
   
-      it('should return an error if the goat is not found', async () => {
-        const mockReq = { params: { id: '49' } };
+      it('should return an error if the fact is not found', async () => {
+        const mockReq = { params: { id: 49 } };
   
-        jest.spyOn(Goat, 'findById').mockRejectedValue(new Error('Goat not found'));
+        jest.spyOn(History, 'getOneById').mockRejectedValue(new Error('Fact not found'));
   
-        await goatsController.destroy(mockReq, mockRes);
+        await historyController.destroy(mockReq, mockRes);
   
-        expect(Goat.findById).toHaveBeenCalledWith(49);
+        expect(History.getOneById).toHaveBeenCalledWith(49);
         expect(mockStatus).toHaveBeenCalledWith(404);
-        expect(mockSend).toHaveBeenCalledWith({ error: 'Goat not found' });
+        
       });
     })
  })

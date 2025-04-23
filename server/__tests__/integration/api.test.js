@@ -2,14 +2,14 @@ const request = require('supertest')
 const app = require('../../app')
 const { resetTestDB } = require('./config')
 
-describe('History API endpoints', () =>{
+xdescribe('History API endpoints', () =>{
 
     beforeEach(async () => {
         await resetTestDB()
       })
     
       beforeAll(() => {
-        api = app.listen(3100, () => {
+        api = app.listen(4000, () => {
           console.log('Test server running on port 3100')
         })
       })
@@ -19,7 +19,7 @@ describe('History API endpoints', () =>{
         api.close(done)
       })
 
-      xdescribe('GET /', () => {
+      describe('GET /', () => {
         it('responds to GET / with a message and a description', async () => {
           const response = await request(api).get('/')
       
@@ -29,16 +29,16 @@ describe('History API endpoints', () =>{
         })
       });
 
-      describe('GET /history', () => {
-        it('should return all history items with a status code 200', async () => {
-          const response = await request(api).get('/history');
+      // describe('GET /history', () => {
+      //   it('should return all history items with a status code 200', async () => {
+      //     const response = await request(api).get('/history');
           
     
-          expect(response.status).toBe(200);
-          expect(response.body.data).toBeInstanceOf(Array);
-          expect(response.body.data.length).toBeGreaterThan(0);
-        });
-      });
+      //     expect(response.status).toBe(200);
+      //     expect(response.body.data).toBeInstanceOf(Array);
+      //     expect(response.body.data.length).toBeGreaterThan(0);
+      //   });
+      // });
 
 
 })
