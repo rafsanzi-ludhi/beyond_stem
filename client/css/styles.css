@@ -54,6 +54,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 100px;
 }
 
 main p {
@@ -85,6 +86,21 @@ main p {
 }
 
 .login-links a:hover {
+  background-color: var(--color-teal-light);
+  color: var(--color-teal-dark);
+  letter-spacing: 2px;
+}
+.logout-btn {
+  background-color: var(--color-teal-dark);
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-mint);
+  padding: 3px 20px;
+  transition-duration: 0.2s;
+}
+.logout-btn:hover {
   background-color: var(--color-teal-light);
   color: var(--color-teal-dark);
   letter-spacing: 2px;
