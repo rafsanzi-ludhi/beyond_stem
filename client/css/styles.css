@@ -58,6 +58,9 @@ main {
   text-align: center;
   margin-top: 50px;
 }
+.main-cardPage {
+  margin-top: 0;
+}
 
 main p {
   max-width: 600px;
