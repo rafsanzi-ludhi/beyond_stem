@@ -1,10 +1,4 @@
-// Utilities and configs come first (e.g., logger, dotenv, db).
-
-// Then middlewares.
-
-// Then routers/routes.
-
-// Then error handling or app.listen().
+require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
