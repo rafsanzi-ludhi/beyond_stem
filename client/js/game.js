@@ -1,6 +1,9 @@
 let currentIndex = 0;
 let facts = [];
 
+//count the cards, so we can show the user a funny popup
+let viewedCount = 0;
+
 function displayFact(index) {
   const container = document.getElementById("fact-display");
   container.innerHTML = "";
@@ -29,6 +32,12 @@ function displayFact(index) {
   card.appendChild(body);
 
   container.appendChild(card);
+
+  viewedCount++;
+
+  if (viewedCount === 5) {
+    showPopup();
+  }
 }
 
 async function fetchFacts() {
@@ -53,6 +62,11 @@ async function fetchFacts() {
   } else {
     window.location.assign("./index.html");
   }
+}
+
+function showPopup() {
+  const popupModal = new bootstrap.Modal(document.getElementById("popupModal"));
+  popupModal.show();
 }
 
 document.getElementById("next-btn").addEventListener("click", () => {
