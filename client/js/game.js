@@ -47,10 +47,7 @@ async function fetchFacts() {
     },
   };
 
-  const response = await fetch(
-    "https://beyond-stem-api.onrender.com/history",
-    options
-  );
+  const response = await fetch("https://beyond-stem-api.onrender.com/history", options);
 
   if (response.status === 200) {
     facts = await response.json();
