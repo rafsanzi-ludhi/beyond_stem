@@ -7,14 +7,13 @@ describe('User', () => {
 
     describe ('getOneByID', () => {
         it('resolves with userID on successful db query', async () => {
-          // Arrange
+      
           const testUser = { user_id: 1, username: 'testUser', password: "testPassword" };
           jest.spyOn(db, 'query').mockResolvedValueOnce({ rows: [testUser] });
     
-          // Act
+         
           const result = await User.getOneById(1);
     
-          // Assert
           expect(result).toBeInstanceOf(User);
           expect(result.username).toBe('testUser');
           expect(result.id).toBe(1);
@@ -25,10 +24,9 @@ describe('User', () => {
         });
     
         it('should throw an Error when user is not found', async () => {
-          // Arrange
+      
           jest.spyOn(db, 'query').mockResolvedValueOnce({ rows: [] });
     
-          // Act & Assert
           await expect(User.getOneById(999)).rejects.toThrow('Unable to locate user.');
         });
       })
@@ -36,14 +34,12 @@ describe('User', () => {
 
     describe ('getOneByUsername', () => {
         it('resolves with user username on successful db query', async () => {
-            // Arrange
+        
             const testUser = { user_id: 1, username: 'testUser', password: "testPassword" };
             jest.spyOn(db, 'query').mockResolvedValueOnce({ rows: [testUser] });
       
-            // Act
             const result = await User.getOneByUsername(testUser.username);
       
-            // Assert
             expect(result).toBeInstanceOf(User);
             expect(result.username).toBe('testUser');
             expect(result.id).toBe(1);
@@ -54,10 +50,10 @@ describe('User', () => {
           });
       
           it('should throw an Error when user is not found', async () => {
-            // Arrange
+        
             jest.spyOn(db, 'query').mockResolvedValueOnce({ rows: [] });
       
-            // Act & Assert
+            
             await expect(User.getOneById(999)).rejects.toThrow('Unable to locate user.');
           });
     })
