@@ -2,7 +2,7 @@ const request = require('supertest')
 const app = require('../../app')
 const { resetTestDB } = require('./config')
 
-xdescribe('History API endpoints', () =>{
+describe('History API endpoints', () =>{
 
     beforeEach(async () => {
         await resetTestDB()
@@ -29,16 +29,16 @@ xdescribe('History API endpoints', () =>{
         })
       });
 
-      // describe('GET /history', () => {
-      //   it('should return all history items with a status code 200', async () => {
-      //     const response = await request(api).get('/history');
+      describe('GET /history', () => {
+        it('should return all history items with a status code 200', async () => {
+          const response = await request(api).get('/history');
           
     
-      //     expect(response.status).toBe(200);
-      //     expect(response.body.data).toBeInstanceOf(Array);
-      //     expect(response.body.data.length).toBeGreaterThan(0);
-      //   });
-      // });
+          expect(response.status).toBe(200);
+          expect(response.body.data).toBeInstanceOf(Array);
+          expect(response.body.data.length).toBeGreaterThan(0);
+        });
+      });
 
 
 })
