@@ -63,7 +63,7 @@ To run the beyond STEM project locally, follow these steps:
 Inside the server folder, create a .env file:
  
     •  PORT=3000
-    •  DB_URL=postgresql://postgres.ngqxqcijtimuzxviwhna:Password123@aws-0-eu-west-2.pooler.supabase.com:6543/postgres
+    •  DB_URL='Your Databse URL'
  
 **Start the Backend Server**
   
@@ -96,8 +96,9 @@ This project's aim was to integrate all core Lafosse course topics:
     •   Frontend: HTML, CSS, JavaScript
     •   Backend: Node.js, Express
     •   Database: SQL
-    •   Auth: Basic auth with hashed passwords
-    •   Deployment: Render/Netlify ?
+    •   Auth: Basic auth with hashed passwords 
+    -   Testing: Jest, Supertest
+    •   Deployment: Render/Netlify 
     •   Version Control: Git + GitHub, following feature branch workflow
  
 **Style Guide**
